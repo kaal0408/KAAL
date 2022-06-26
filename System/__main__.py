@@ -1,5 +1,5 @@
 import glob
-from System import client, bot
+from System.init import client, bot
 from sys import argv
 from telethon import TelegramClient
 from System.Config import Var
