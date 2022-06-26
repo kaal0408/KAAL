@@ -1,5 +1,6 @@
 import glob
-from System.__init__ import client
+from System import *
+from System.__init__ import client, bot
 from sys import argv
 from telethon import TelegramClient
 from System.Config import Var
