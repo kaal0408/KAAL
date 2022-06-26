@@ -1,4 +1,12 @@
 from requests import get
+import os
+from telethon import TelegramClient
+from telethon import TelegramClient, events
+from telethon.sessions import StringSession
+from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
+import logging
+from pytgcalls import PyTgCalls
+from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
 import pylast
 import asyncio
 from distutils.util import strtobool as sb
@@ -10,12 +18,17 @@ from telethon import TelegramClient
 from System.zypherConfig import Var
 import time
 
-if Var.ZYPHER_SESSION:
-    session_name = str(Var.ZYPHER_SESSION)
+if Var.STRING_SESSION:
+    session_name = str(Var.STRING_SESSION)
     bot = TelegramClient(StringSession(session_name), Var.APP_ID, Var.API_HASH)
 else:
     session_name = "startup"
     bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
+
+client = TelegramClient(StringSession(Config.STRING_SESSION), Config.API_ID, Config.API_HASH)
+call_py = PyTgCalls(client)
+client.start()
+call_py.start()
 
 StartTime = time.time()
 KAALver = "1.0"
