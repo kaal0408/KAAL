@@ -66,4 +66,7 @@ RUN wget -O chromedriver.zip http://chromedriver.storage.googleapis.com/$(curl -
 COPY omk.py .
 COPY Zsetup.txt .
 RUN pip3 install --upgrade pip && pip3 install --no-cache-dir -r Zsetup.txt
-CMD ["python3","omk.py"]
+Aur ye jo omk.py hai 
+Iska jagha directly path de do System ka
+
+CMD["python3", "System"]
