@@ -2,7 +2,7 @@ from telethon import events, buttons
 
 from System import ALIVE_NAME
 from System.utils import admin_cmd, sudo_cmd
-from System.zypherConfig import Config, Var
+from System.Config import Config, Var
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "kααl uѕєr"
 
