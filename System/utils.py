@@ -114,7 +114,7 @@ def load_module(shortname):
         sys.modules["uniborg.util"] = System.utils
         mod.Config = Config
         mod.borg = bot
-        mod.Lion = bot
+        mod.System = bot
         # auto-load
         mod.admin_cmd = admin_cmd
         mod.sudo_cmd = sudo_cmd
