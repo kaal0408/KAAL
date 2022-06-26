@@ -2,7 +2,7 @@ import glob
 from System.__init__ import bot
 from sys import argv
 from telethon import TelegramClient
-from System.zypherConfig import Var
+from System.Config import Var
 from System.utils import load_module, start_mybot, load_pmbot
 from pathlib import Path
 import telethon.utils
@@ -52,7 +52,7 @@ for name in files:
         shortname = path1.stem
         load_module(shortname.replace(".py", ""))
 
-print("Zypher has been deployed! ")
+print("KAAL has been deployed! ")
 
 print("Setting up TGBot")
 path = "plugins/mybot/*.py"
@@ -77,9 +77,9 @@ print("TGBot set up - Level - Basic")
 print(
     """
                 ----------------------------------------------------------------------
-                    Zʏᴘʜᴇʀ X ʜᴀs ʙᴇᴇɴ ᴅᴇᴘʟᴏʏᴇᴅ, ᴅᴏ ᴠɪsɪᴛ @ZypherSupport !!
+                    kaal X ʜᴀs ʙᴇᴇɴ ᴅᴇᴘʟᴏʏᴇᴅ, ᴅᴏ ᴠɪsɪᴛ @Murat_30_God !!
                     ᴢʏᴘʜᴇʀ ᴠᴇʀ: V1.0
-                    ©ᴛᴇᴀᴍ ᴢʏᴘʜᴇʀ
+                    ©kaal
                 ----------------------------------------------------------------------
 """
 )
