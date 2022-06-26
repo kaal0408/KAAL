@@ -3,7 +3,7 @@ from System.__init__ import bot
 from sys import argv
 from telethon import TelegramClient
 from System.Config import Var
-from System.utils import load_module, start_mybot, load_pmbot
+from System.utils import load_module, start_music, load_pmbot
 from pathlib import Path
 import telethon.utils
 from System import CMD_HNDLR
@@ -55,13 +55,13 @@ for name in files:
 print("KAAL has been deployed! ")
 
 print("Setting up TGBot")
-path = "plugins/mybot/*.py"
+path = "music/*.py"
 files = glob.glob(path)
 for name in files:
     with open(name) as f:
         path1 = Path(f.name)
         shortname = path1.stem
-        start_mybot(shortname.replace(".py", ""))
+        start_music(shortname.replace(".py", ""))
 
 if LOAD_MYBOT == "True":
     path = "plugins/mybot/pmbot/*.py"
