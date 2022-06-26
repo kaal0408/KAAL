@@ -2,6 +2,7 @@ import glob
 import glob
 from pathlib import Path
 from sys import argv
+from System import bot ,client
 from telethon import TelegramClient
 from System.Config import Var
 from System.utils import load_module, start_music, load_pmbot
