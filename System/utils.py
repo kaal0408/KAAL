@@ -11,7 +11,7 @@ import logging
 import inspect
 
 handler = Var.CMD_HNDLR if Var.CMD_HNDLR else r"\."
-sudo_hndlr = Var.SUDO_HNDLR if Var.SUDO_HNDLR else "!"
+sudo_hndlr = Var.SUDO_HNDLR if Var.SUDO_HNDLR else "."
 
 
 def command(**args):
@@ -99,7 +99,7 @@ def load_module(shortname):
         spec.loader.exec_module(mod)
         print("Successfully (re)imported " + shortname)
     else:
-        import Lion.utils
+        import System.utils
         import importlib
         path = Path(f"plugins/{shortname}.py")
         name = "plugins.{}".format(shortname)
@@ -121,7 +121,7 @@ def load_module(shortname):
         mod.edit_or_reply = edit_or_reply
         mod.eor = eor
         # support for paperplaneextended
-        sys.modules["Lion.events"] = System.utils
+        sys.modules["System.events"] = System.utils
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["plugins." + shortname] = mod
@@ -408,7 +408,7 @@ async def eor(event, text):
 # TGBot
 
 
-def start_mybot(shortname):
+def start_music(shortname):
     if shortname.startswith("__"):
         pass
     elif shortname.endswith("_"):
@@ -416,25 +416,25 @@ def start_mybot(shortname):
         import sys
         from pathlib import Path
 
-        path = Path(f"Lion/plugins/mybot/{shortname}.py")
-        name = "Lion.plugins.mybot.{}".format(shortname)
+        path = Path(f"music/{shortname}.py")
+        name = "music.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
         print("𝙸𝙼𝙿𝙾𝚁𝚃𝙸𝙽𝙶 𝙼𝙾𝙳𝚄𝙻𝙴𝚂 𝙿𝙻𝙴𝙰𝚂𝙴 𝚆𝙰𝙸𝚃.")
-        print("Zʏᴘʜᴇʀ - ɪᴍᴘᴏʀᴛᴇᴅ " + shortname)
+        print("kaal - ɪᴍᴘᴏʀᴛᴇᴅ " + shortname)
     else:
         import importlib
         import sys
         from pathlib import Path
 
-        path = Path(f"plugins/mybot/{shortname}.py")
-        name = "plugins.mybot.{}".format(shortname)
+        path = Path(f"music/{shortname}.py")
+        name = "music.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.tgbot = bot.tgbot
         spec.loader.exec_module(mod)
-        sys.modules["plugins.mybot" + shortname] = mod
+        sys.modules["music" + shortname] = mod
         print("𝚃𝙶 𝙱𝙾𝚃 𝙷𝙰𝚂 𝙸𝙼𝙿𝙾𝚁𝚃𝙴𝙳 " + shortname)
 
 
