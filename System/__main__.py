@@ -1,9 +1,10 @@
 import glob
+import glob
+from pathlib import Path
 from sys import argv
 from telethon import TelegramClient
 from System.Config import Var
 from System.utils import load_module, start_music, load_pmbot
-from pathlib import Path
 import telethon.utils
 from System import CMD_HNDLR
 
