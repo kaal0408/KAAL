@@ -53,7 +53,7 @@ spamwatch
 speedtest-cli>=2.1.2
 sqlalchemy==1.3.23
 telegraph
-telethon==1.22.0
+telethon
 tswift
 urbandict
 validators
@@ -68,7 +68,6 @@ glitch_this
 numpy
 fontTools
 
-telethon==1.24.0
 py-tgcalls
 requests
 pillow
